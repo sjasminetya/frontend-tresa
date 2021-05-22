@@ -42,6 +42,7 @@
 @import "spinners";
 @import "utilities";
 @import "print";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 .brand-text-icon {
     font-weight: 500;
@@ -49,4 +50,41 @@
     line-height: 39px;
     font-family: "Poppins", sans-serif;
     color: $primary;
+}
+
+header {
+    border-bottom: 1px solid $gray-200;
+    width: 100%;
+    position: relative;
+
+    .navbar {
+        height: 80px;
+
+        a {
+            &:hover {
+                color: $primary;
+            }
+        }
+
+        ul.navbar-nav {
+            li.nav-item {
+                &.active {
+                    a.nav-link {
+                        color: $primary;
+                    }
+                }
+                a {
+                    &.nav-link {
+                        color: $gray-900;
+                        padding: 0px 16px 0px 16px;
+                        font-weight: 400;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

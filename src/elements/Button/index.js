@@ -1,6 +1,6 @@
 import React from 'react';
 import propTypes from 'prop-types';
-
+import { Link } from 'react-router-dom';
 
 export default function Button(props) {
     const className = [props.className]
@@ -32,13 +32,23 @@ export default function Button(props) {
             onClick={onClick}
         >
             {
-                props.isLoading ?
-                    <>
-                        <span className="spinner-border spinner-border-sm mx-5"></span>
-                        <span className="sr-only">Loading...</span>
-                    </>
-                    :
-                    props.children
+                props.type === "link" &&
+                <Link
+                    to={props.href}
+                    className={className.join(" ")}
+                    style={props.style}
+                    onClick={onClick}
+                >
+                    {
+                        props.isLoading ?
+                        <>
+                            <span className="spinner-border spinner-border-sm mx-5"></span>
+                            <span className="sr-only">Loading...</span>
+                        </>
+                        :
+                        props.children
+                    }
+                </Link>
             }
         </button>
     )
