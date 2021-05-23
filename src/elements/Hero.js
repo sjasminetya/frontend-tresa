@@ -7,7 +7,11 @@ import IconTreasure from 'assets/images/icons/ic_treasure.svg'
 import Button from 'elements/Button'
 
 export default function Hero(props) {
-    const showMostPicked = () => {}
+    const showMostPicked = () => {
+        window.scrollTo({
+            top: 
+        })
+    }
     return (
         <section className="container pt-5">
             <div className="row">
@@ -24,6 +28,12 @@ export default function Hero(props) {
                     >
                         Show Me Now
                     </Button>
+                    <div className="mt-5 d-flex">
+                        <>
+                            <img src={IconTraveler} alt="Icon Traveler" />
+                            <p>{props.da}</p>
+                        </>
+                    </div>
                 </div>
             </div>
         </section>
