@@ -8,7 +8,7 @@ export default function Button(props) {
     props.isLarge && className.push("btn-lg");
     props.isBlock && className.push("btn-block");
     props.isPrimary && className.push("btn-primary");
-    props.hasShadow && className.push("shadow-lg");
+    props.hasShadow && className.push("btn-shadow");
 
     const onClick = () => {
         if (props.onClick) props.onClick()

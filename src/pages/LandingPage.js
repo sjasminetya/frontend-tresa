@@ -7,7 +7,7 @@ export const LandingPage = (props) => {
     return (
         <div>
             <Header {...props}></Header>
-            <Hero data={landingPage.Hero} />
+            <Hero data={landingPage.hero} />
         </div>
     )
 }

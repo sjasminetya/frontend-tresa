@@ -48,7 +48,6 @@
     font-weight: 500;
     font-size: 26px;
     line-height: 39px;
-    font-family: "Poppins", sans-serif;
     color: $primary;
 }
 
@@ -56,6 +55,12 @@ header {
     border-bottom: 1px solid $gray-200;
     width: 100%;
     position: relative;
+
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
 
     .navbar {
         height: 80px;
@@ -99,7 +104,6 @@ header {
 
     a {
         color: $white;
-        font-family: "Poppins", sans-serif;
         &:hover {
             text-decoration: none;
         }
