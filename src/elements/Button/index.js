@@ -7,6 +7,8 @@ export default function Button(props) {
     props.isSmall && className.push("btn-sm");
     props.isLarge && className.push("btn-lg");
     props.isBlock && className.push("btn-block");
+    props.isPrimary && className.push("btn-primary");
+    props.hasShadow && className.push("shadow-lg");
 
     const onClick = () => {
         if (props.onClick) props.onClick()
@@ -35,7 +37,6 @@ export default function Button(props) {
                 props.type === "link" &&
                 <Link
                     to={props.href}
-                    className={className.join(" ")}
                     style={props.style}
                     onClick={onClick}
                 >
@@ -65,5 +66,6 @@ Button.propTypes = {
     isSmall: propTypes.bool,
     isLarge: propTypes.bool,
     isBlock: propTypes.bool,
+    isPrimary: propTypes.bool,
     hasShadow: propTypes.bool
 }
