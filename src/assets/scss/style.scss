@@ -144,6 +144,11 @@ section {
 
     .meta-wrapper {
         margin-top: 1rem;
+        .custom-color {
+            a, h5 {
+                color: $gray-900;
+            }
+        }
         a, h5 {
             font-size: 1.125rem;
             margin-bottom: 2px;
