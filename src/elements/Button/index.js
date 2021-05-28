@@ -8,7 +8,7 @@ export default function Button(props) {
     props.isLarge && className.push("btn-lg");
     props.isBlock && className.push("btn-block");
     props.isPrimary && className.push("btn-primary");
-    props.hasShadow && className.push("btn-shadow");
+    props.hasShadow && className.push("shadow-lg");
 
     const onClick = () => {
         if (props.onClick) props.onClick()
@@ -28,7 +28,7 @@ export default function Button(props) {
     }
 
     return (
-        <button
+        <div
             className={className.join(" ")}
             style={props.style}
             onClick={onClick}
@@ -51,7 +51,7 @@ export default function Button(props) {
                     }
                 </Link>
             }
-        </button>
+        </div>
     )
 }
 
