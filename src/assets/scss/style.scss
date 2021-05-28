@@ -14,6 +14,7 @@
 @import "images";
 @import "code";
 @import "grid";
+@import "container-grid";
 @import "tables";
 @import "forms";
 @import "buttons";
@@ -108,4 +109,12 @@ header {
             text-decoration: none;
         }
     }
+}
+
+section {
+    margin-bottom: 70px;
+}
+
+.card {
+    height: 100%;
 }
