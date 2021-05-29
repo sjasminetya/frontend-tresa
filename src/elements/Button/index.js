@@ -28,18 +28,35 @@ export default function Button(props) {
     }
 
     if (props.type === "link") {
-        return (
-            <div>
-                <Link
-                    className={className.join(" ")}
-                    to={props.href}
-                    style={props.style}
-                    onClick={onClick}
-                >
-                    {props.children}
-                </Link>
-            </div>
-        )
+        if (props.isExternal) {
+            return (
+                <div>
+                    <Link
+                        className={className.join(" ")}
+                        to={props.href}
+                        style={props.style}
+                        onClick={onClick}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        {props.children}
+                    </Link>
+                </div>
+            )
+        } else {
+            return (
+                <div>
+                    <Link
+                        className={className.join(" ")}
+                        to={props.href}
+                        style={props.style}
+                        onClick={onClick}
+                    >
+                        {props.children}
+                    </Link>
+                </div>
+            )
+        }
     }
     return (
         <button
@@ -72,5 +89,6 @@ Button.propTypes = {
     isLarge: propTypes.bool,
     isBlock: propTypes.bool,
     isPrimary: propTypes.bool,
-    hasShadow: propTypes.bool
+    hasShadow: propTypes.bool,
+    isExternal: propTypes.bool
 }

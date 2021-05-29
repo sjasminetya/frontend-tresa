@@ -5,6 +5,7 @@ import Hero from 'elements/Hero'
 import MostPicked from 'elements/MostPicked'
 import Categories from 'elements/Categories'
 import Testimony from 'elements/Testimony'
+import Footer from 'elements/Footer'
 
 export const LandingPage = (props) => {
     const refMostPicked = useRef()
@@ -15,6 +16,7 @@ export const LandingPage = (props) => {
             <MostPicked refMostPicked={refMostPicked} data={landingPage.mostPicked} />
             <Categories data={landingPage.categories} />
             <Testimony data={landingPage.testimonial} />
+            <Footer />
         </div>
     )
 }
