@@ -17,7 +17,7 @@ export default function Button(props) {
     if (props.isDisabled) {
         props.isDisabled && className.push("disabled")
         return (
-            <span 
+            <span
                 className={className.join(" ")}
                 style={props.style}
                 onClick={onClick}
@@ -27,31 +27,36 @@ export default function Button(props) {
         )
     }
 
+    if (props.type === "link") {
+        return (
+            <div>
+                <Link
+                    className={className.join(" ")}
+                    to={props.href}
+                    style={props.style}
+                    onClick={onClick}
+                >
+                    {props.children}
+                </Link>
+            </div>
+        )
+    }
     return (
-        <div
+        <button
             className={className.join(" ")}
             style={props.style}
             onClick={onClick}
         >
             {
-                props.type === "link" &&
-                <Link
-                    to={props.href}
-                    style={props.style}
-                    onClick={onClick}
-                >
-                    {
-                        props.isLoading ?
-                        <>
-                            <span className="spinner-border spinner-border-sm mx-5"></span>
-                            <span className="sr-only">Loading...</span>
-                        </>
-                        :
-                        props.children
-                    }
-                </Link>
+                props.isLoading ?
+                    <>
+                        <span className="spinner-border spinner-border-sm mx-5"></span>
+                        <span className="sr-only">Loading...</span>
+                    </>
+                    :
+                    props.children
             }
-        </div>
+        </button>
     )
 }
 

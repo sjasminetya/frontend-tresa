@@ -22,7 +22,7 @@ export default function Hero(props) {
                     <h1 className="font-weight-bold" style={{ lineHeight: "63px" }}>Forget Busy Work, <br /> Start Next Vacation</h1>
                     <p className="text-gray-500 pt-3" style={{ paddingRight: 80, lineHeight: "170%" }}>We provide what you need to enjoy your holiday with family. Time to make another memorable moments.</p>
                     <Button
-                        className="btn-hero text-center rounded mt-3"
+                        className="btn px-5 rounded mt-3"
                         isPrimary
                         hasShadow
                         type="link"

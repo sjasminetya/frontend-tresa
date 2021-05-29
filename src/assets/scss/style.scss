@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
+@import "colorVariables";
 @import "functions";
 @import "variables";
 @import "mixins";
@@ -91,23 +92,6 @@ header {
                     }
                 }
             }
-        }
-    }
-}
-
-.btn-hero {
-    width: 210px;
-    height: 50px;
-    line-height: 50px;
-
-    &:hover {
-        background: $primary;
-    }
-
-    a {
-        color: $white;
-        &:hover {
-            text-decoration: none;
         }
     }
 }
@@ -229,4 +213,10 @@ section {
     object-fit: contain;
     height: 100%;
     width: 100%;
+}
+
+.testimonial-hero,
+.testimonial-hero img {
+    width: 365.98px;
+    height: 501.88px;
 }
