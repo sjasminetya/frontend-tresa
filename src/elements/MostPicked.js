@@ -36,6 +36,7 @@ export default function MostPicked(props) {
                                                 className="stretched-link d-block text-white"
                                                 type="link"
                                                 href={`/properties/${item._id}`}
+                                                isExternal
                                             >
                                                 <h5>{item.name}</h5>
                                             </Button>

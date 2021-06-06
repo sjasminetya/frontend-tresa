@@ -36,8 +36,6 @@ export default function Button(props) {
                         to={props.href}
                         style={props.style}
                         onClick={onClick}
-                        target="_blank"
-                        rel="noopener noreferrer"
                     >
                         {props.children}
                     </Link>

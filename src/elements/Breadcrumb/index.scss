@@ -1,0 +1,11 @@
+.breadcrumb {
+    .breadcrumb-item {
+        a {
+            color: #B0B0B0;
+        }
+    }
+
+    .breadcrumb-item::before {
+        color: #B0B0B0;
+    }
+}

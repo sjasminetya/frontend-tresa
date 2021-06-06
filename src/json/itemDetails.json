@@ -5,15 +5,15 @@
   "imageUrls": [
     {
       "_id": "asd1293uasdads1",
-      "url": "/images/img-featured-1.jpg"
+      "url": "/images/details1.jpg"
     },
     {
       "_id": "asd1293uasdads1",
-      "url": "/images/img-featured-2.jpg"
+      "url": "/images/details2.jpg"
     },
     {
       "_id": "asd1293uasdads1",
-      "url": "/images/img-featured-3.jpg"
+      "url": "/images/details3.jpg"
     }
   ],
   "country": "Indonesia",
@@ -28,49 +28,49 @@
       "_id": "asd1293uasdads1",
       "qty": "3",
       "name": "bedroom",
-      "imageUrl": "/images/icon-bedroom.svg"
+      "imageUrl": "/images/ic_bedroom.svg"
     },
     {
       "_id": "asd1293uasdads1",
       "qty": "1",
       "name": "living room",
-      "imageUrl": "/images/icon-livingroom.svg"
+      "imageUrl": "/images/ic_livingroom.svg"
     },
     {
       "_id": "asd1293uasdads1",
       "qty": "2",
       "name": "bath room",
-      "imageUrl": "/images/icon-bathroom.svg"
+      "imageUrl": "/images/ic_bathroom.svg"
     },
     {
       "_id": "asd1293uasdads1",
       "qty": "1",
       "name": "dining room",
-      "imageUrl": "/images/icon-diningroom.svg"
+      "imageUrl": "/images/ic_diningroom.svg"
     },
     {
       "_id": "asd1293uasdads1",
       "qty": "10",
       "name": "mbps",
-      "imageUrl": "/images/icon-wifi.svg"
+      "imageUrl": "/images/ic_wifi.svg"
     },
     {
       "_id": "asd1293uasdads1",
       "qty": "2",
       "name": "units ready",
-      "imageUrl": "/images/icon-airconditioner.svg"
+      "imageUrl": "/images/ic_ac.svg"
     },
     {
       "_id": "asd1293uasdads1",
       "qty": "2",
       "name": "refrigerator",
-      "imageUrl": "/images/icon-refrigerator.svg"
+      "imageUrl": "/images/ic_kulkas.svg"
     },
     {
       "_id": "asd1293uasdads1",
       "qty": "1",
       "name": "television",
-      "imageUrl": "/images/icon-tv.svg"
+      "imageUrl": "/images/ic_tv.svg"
     }
   ],
   "activities": [
