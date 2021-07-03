@@ -14,14 +14,13 @@ export default function Date(props) {
                     </span>
                 </div>
                 <input type="text" placeholder="07 Jun - 07 Jun" className="form-control" onClick={() => setIsShow(true)} />
-                
-            </div>
-            <DateRangePicker
+                <DateRangePicker
                     placement="bottomStart"
                     format="DD MMM"
                     style={{ width: 280 }}
                     open={isShow}
                 />
+            </div>
         </div>
     )
 }
