@@ -11,7 +11,7 @@ export const LandingPage = (props) => {
     const refMostPicked = useRef()
     return (
         <div>
-            <Header {...props}></Header>
+            <Header {...props} />
             <Hero refMostPicked={refMostPicked} data={landingPage.hero} />
             <MostPicked refMostPicked={refMostPicked} data={landingPage.mostPicked} />
             <Categories data={landingPage.categories} />

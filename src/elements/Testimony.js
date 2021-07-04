@@ -24,7 +24,7 @@ export default function Testimony({ data }) {
                         <span className="text-gray-500">{data.familyName}, {data.familyOccupation}</span>
                         <Button className="btn px-5" style={{ marginTop: 60 }} hasShadow isPrimary type="link" href={`/testi/${data._id}`}>
                             Read Their Story
-                    </Button>
+                        </Button>
                     </div>
                 </div>
             </section>

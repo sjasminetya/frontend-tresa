@@ -1,3 +1,13 @@
 .input-group-text.bg-date {
     background-color: #152C5B;
 }
+
+.input-date {
+    .form-control {
+        min-height: 45px;
+    }
+
+    .date-range-wrapper {
+        margin-left: 15px;
+    }
+}

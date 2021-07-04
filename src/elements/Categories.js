@@ -47,7 +47,9 @@ function Categories({ data }) {
                                             <h5>{val.name}</h5>
                                         </Button>
                                         <span className="text-gray-500">
-                                            {val.city}, {val.country}
+                                            {
+                                                val.country ? val.city + ", " + val.country : val.city 
+                                            }
                                         </span>
                                     </div>
                                 </div>

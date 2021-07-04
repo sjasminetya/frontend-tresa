@@ -5,6 +5,9 @@ import details from 'json/itemDetails.json'
 import Image from 'elements/DetailPage/Image'
 import Description from '../elements/DetailPage/Description'
 import InputBooking from 'elements/DetailPage/InputBooking'
+import Categories from 'elements/Categories'
+import Testimony from 'elements/Testimony'
+import Footer from 'elements/Footer'
 
 export const DetailPage = (props) => {
     useEffect(() => {
@@ -26,6 +29,9 @@ export const DetailPage = (props) => {
                     </div>
                 </div>
             </div>
+            <Categories data={details.categories} />
+            <Testimony data={details.testimonial} />
+            <Footer />
         </div>
     )
 }

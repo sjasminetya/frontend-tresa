@@ -102,38 +102,38 @@
   "categories": [
     {
       "_id": "asd1293uasdads1",
-      "name": "House with beauty backyard",
+      "name": "Treasure to Choose",
       "items": [
         {
           "_id": "asd1293uasdads1",
-          "name": "PSW Antasari",
+          "name": "Green Lake",
           "imageUrl": "/images/treasure-1.jpg",
-          "country": "South Korea",
-          "city": "Seoul Flore",
+          "country": "",
+          "city": "Nature",
           "isPopular": false
         },
         {
           "_id": "asd1293uasdads1",
-          "name": "Kuretakeso",
+          "name": "Dog Clubs",
           "imageUrl": "/images/treasure-2.jpg",
-          "country": "South Korea",
-          "city": "Seoul Flore",
+          "country": "",
+          "city": "Pool",
           "isPopular": false
         },
         {
           "_id": "asd1293uasdads1",
-          "name": "Arya Duta",
+          "name": "Labour and Wait",
           "imageUrl": "/images/treasure-3.jpg",
-          "country": "South Korea",
-          "city": "Seoul Flore",
+          "country": "",
+          "city": "Shopping",
           "isPopular": true
         },
         {
           "_id": "asd1293uasdads1",
           "name": "Grand Dhika",
           "imageUrl": "/images/treasure-4.jpg",
-          "country": "South Korea",
-          "city": "Seoul Flore",
+          "country": "",
+          "city": "Beach",
           "isPopular": false
         }
       ]
@@ -141,11 +141,11 @@
   ],
   "testimonial": {
     "_id": "asd1293uasdads1",
-    "imageUrl": "/images/testimonial-detailspage.jpg",
+    "imageUrl": "/images/testimony.jpg",
     "name": "Happy Family",
     "rate": 4.25,
-    "content": "What a great trip with my family and I should try again and again next time soon...",
+    "content": "As a wife I can pick a great trip with my own lovely family ... thank you!",
     "familyName": "Angga",
-    "familyOccupation": "UI Designer"
+    "familyOccupation": "Product Designer"
   }
 }
