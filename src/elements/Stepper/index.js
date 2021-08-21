@@ -32,7 +32,7 @@ const Stepper = (props) => {
 export default Stepper
 
 Stepper.propTypes = {
-    data: propTypes.object.isRequired,
+    steps: propTypes.object.isRequired,
     initialStep: propTypes.string
 }
 

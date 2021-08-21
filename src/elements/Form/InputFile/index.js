@@ -17,7 +17,7 @@ const InputFile = (props) => {
                     )
                 }
                 <input type="file" accept={accept} ref={refInputFile} name={name} value={value} onChange={props.onChange} className="d-none" />
-                <input onClick={() => refInputFile.current.click()} defaultValue={value} placeholder={placeholder} className={["form-control", inputClassName].join(" ")} />
+                <input onClick={() => refInputFile.current.click()} defaultValue={value} placeholder={placeholder} className={["form-control text-left", inputClassName].join(" ")} />
                 {
                     append && (
                         <div className="input-group-append bg-gray-900">

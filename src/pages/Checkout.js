@@ -74,7 +74,7 @@ export default function Checkout() {
 	return (
 		<>
 			<Header isCenter />
-			<Stepper steps={steps} initialStep="payment">
+			<Stepper steps={steps}>
 				{
 					(prevStep, nextStep, currentStep, steps) => (
 						<>
@@ -138,7 +138,7 @@ export default function Checkout() {
 											className="btn"
 											type="link"
 											isBlock
-											href={prevStep}
+											href={`/properties/${ItemDetails._id}`}
 										>
 											Cancel
 										</Button>
