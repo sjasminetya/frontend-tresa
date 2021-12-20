@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import { LandingPage } from "pages/LandingPage";
-import 'assets/scss/style.scss';
-import { DetailPage } from "pages/DetailPage";
+import LandingPage from "pages/LandingPage";
+import DetailPage from "pages/DetailPage";
 import Checkout from "pages/Checkout";
+import 'assets/scss/style.scss';
 
 function App() {
   return (

@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import Header from 'elements/Header'
-import Fade from 'react-reveal/Fade'
-import Button from 'elements/Button'
-import Stepper, { Numbering, MainContent, Meta, Controller } from 'elements/Stepper'
-import Booking from 'elements/Checkout/Booking'
-import Payment from 'elements/Checkout/Payment'
-import Completed from 'elements/Checkout/Completed'
-import ItemDetails from 'json/itemDetails.json'
+import React, { useEffect, useState } from 'react';
+import Header from 'elements/Header';
+import Fade from 'react-reveal/Fade';
+import Button from 'elements/Button';
+import Stepper, { Numbering, MainContent, Meta, Controller } from 'elements/Stepper';
+import Booking from 'elements/Checkout/Booking';
+import Payment from 'elements/Checkout/Payment';
+import Completed from 'elements/Checkout/Completed';
+import { useSelector } from 'react-redux';
 
 export default function Checkout() {
 	const [state, setState] = useState({
@@ -19,10 +19,9 @@ export default function Checkout() {
 			bankName: "",
 			bankHolder: ""
 		}
-	})
-	const checkout = {
-		duration: 3
-	}
+	});
+  const checkout = useSelector(state => state.checkout);
+  const { detail } = useSelector(state => state.page);
 
 	const onChange = (e) => {
 		setState({
@@ -41,7 +40,7 @@ export default function Checkout() {
 				<Booking
 					data={state.data}
 					checkout={checkout}
-					ItemDetails={ItemDetails}
+					ItemDetails={detail}
 					onChange={onChange}
 				/>
 			)
@@ -52,7 +51,7 @@ export default function Checkout() {
 			content: (
 				<Payment
 					data={state.data}
-					ItemDetails={ItemDetails}
+					ItemDetails={detail}
 					checkout={checkout}
 					onChange={onChange}
 				/>
@@ -68,8 +67,6 @@ export default function Checkout() {
 	useEffect(() => {
 		window.scroll(0, 0)
 	}, [])
-
-	console.log(state.data)
 
 	return (
 		<>
@@ -106,10 +103,10 @@ export default function Checkout() {
 											)
 										}
 										<Button
-											className="btn"
+											className="btn cancel-book"
 											type="link"
 											isBlock
-											href={`/properties/${ItemDetails._id}`}
+											href={`/properties/${detail._id}`}
 										>
 											Cancel
 										</Button>
@@ -138,7 +135,7 @@ export default function Checkout() {
 											className="btn"
 											type="link"
 											isBlock
-											href={`/properties/${ItemDetails._id}`}
+											href={`/properties/${detail._id}`}
 										>
 											Cancel
 										</Button>

@@ -1,22 +1,32 @@
-import React, { useRef } from 'react'
-import Header from 'elements/Header'
-import landingPage from 'json/landingPage.json'
-import Hero from 'elements/Hero'
-import MostPicked from 'elements/MostPicked'
-import Categories from 'elements/Categories'
-import Testimony from 'elements/Testimony'
-import Footer from 'elements/Footer'
+import React, { useEffect, useRef } from 'react';
+import Header from 'elements/Header';
+import Hero from 'elements/Hero';
+import MostPicked from 'elements/MostPicked';
+import Categories from 'elements/Categories';
+import Testimony from 'elements/Testimony';
+import Footer from 'elements/Footer';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchPage } from 'store/action/page';
 
-export const LandingPage = (props) => {
-    const refMostPicked = useRef()
-    return (
-        <div>
-            <Header {...props} />
-            <Hero refMostPicked={refMostPicked} data={landingPage.hero} />
-            <MostPicked refMostPicked={refMostPicked} data={landingPage.mostPicked} />
-            <Categories data={landingPage.categories} />
-            <Testimony data={landingPage.testimonial} />
-            <Footer />
-        </div>
-    )
-}
+const LandingPage = (props) => {
+  const refMostPicked = useRef();
+  const dispatch = useDispatch();
+  const { landingPage } = useSelector(state => state.page);
+
+  useEffect(() => {
+    dispatch(fetchPage(`${process.env.REACT_APP_API}/api/v1/member/landing-page`, 'landingPage'))
+  }, [dispatch]);
+
+  return (
+    <>
+      <Header {...props} />
+      <Hero refMostPicked={refMostPicked} data={landingPage.hero} />
+      <MostPicked refMostPicked={refMostPicked} data={landingPage.mostPicked} />
+      <Categories data={landingPage.category} />
+      <Testimony data={landingPage.testimonial} />
+      <Footer />
+    </>
+  )
+};
+
+export default LandingPage;

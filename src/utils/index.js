@@ -1,4 +1,4 @@
-import numberFormat from 'utils/numberFormat'
-import formatDate from 'utils/formatDate'
+import numberFormat from './numberFormat';
+import formatDate from './formatDate';
 
-export { numberFormat, formatDate }
+export { numberFormat, formatDate };

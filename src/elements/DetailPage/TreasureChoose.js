@@ -1,21 +1,20 @@
 import React from "react";
-import Button from "./Button";
+import Button from "../Button";
 import Fade from "react-reveal/Fade";
 
-function Categories({ data }) {
-  return data.length > 0 && data.map((item, index) => (
+function TreasureChoose({ data }) {
+  return data.length > 0 && (
     <section
       className="container"
       style={{ paddingLeft: "2rem" }}
-      key={`Category-${index + 1}`}
     >
       <Fade bottom>
-        <h4 className="mb-3 font-weight-medium">{item.name}</h4>
+        <h4 className="mb-3 font-weight-medium">Treasure to Choose</h4>
         <div className="container-grid">
-          {item.itemId.map((val, v) => (
+          {data.map((val, v) => (
               <div
                 className="item column-3 row-1"
-                key={`Category-${index + 1}-Item${v + 1}`}
+                key={v}
               >
                 <Fade bottom delay={300 * v}>
                   <div className="card">
@@ -26,7 +25,7 @@ function Categories({ data }) {
                     )}
                     <figure className="img-wrapper" style={{ height: 180 }}>
                       <img
-                        src={`${process.env.REACT_APP_API}/${val.imageId[0].imageUrl}`}
+                        src={`${process.env.REACT_APP_API}/${val.imageUrl}`}
                         alt={val.title}
                         className="img-cover"
                       />
@@ -37,12 +36,10 @@ function Categories({ data }) {
                         type="link"
                         href={`/properties/${val._id}`}
                       >
-                        <h5>{val.title}</h5>
+                        <h5>{val.name}</h5>
                       </Button>
                       <span className="text-gray-500">
-                        {
-                          val.country ? val.city + ", " + val.country : val.city
-                        }
+                        {val.type}
                       </span>
                     </div>
                   </div>
@@ -52,7 +49,7 @@ function Categories({ data }) {
         </div>
       </Fade>
     </section>
-  ));
+  )
 }
 
-export default Categories;
+export default TreasureChoose;
