@@ -14,7 +14,7 @@ const LandingPage = (props) => {
   const { landingPage } = useSelector(state => state.page);
 
   useEffect(() => {
-    dispatch(fetchPage(`${process.env.REACT_APP_API}/api/v1/member/landing-page`, 'landingPage'))
+    dispatch(fetchPage("/landing-page", 'landingPage'))
   }, [dispatch]);
 
   return (

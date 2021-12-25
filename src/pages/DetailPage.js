@@ -23,7 +23,7 @@ const DetailPage = (props) => {
   }, []);
 
   useEffect(() => {
-    dispatch(fetchPage(`${process.env.REACT_APP_API}/api/v1/member/detail-page/${id}`, 'detail'))
+    dispatch(fetchPage(`detail-page/${id}`, 'detail'))
   }, [dispatch, id]);
 
   return (

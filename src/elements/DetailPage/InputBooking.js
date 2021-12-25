@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect, useState } from 'react';
 import InputDate from 'elements/Form/InputDate';
 import Number from 'elements/Form/InputNumber';
 import Button from 'elements/Button';
@@ -25,12 +26,23 @@ export default function InputBooking({ data, startBooking }) {
       _id: data._id,
       duration: nights,
       date: {
-        startDate: moment(date.startDate).format("YYYY-MM-DD"),
-        endDate: moment(date.endDate).format("YYYY-MM-DD"),
+        startDate: moment(date.startDate).format(""),
+        endDate: moment(date.endDate).format(""),
       }
     }));
     history.push("/checkout");
   };
+
+  useEffect(() => {
+    if (nights > 1) {
+      const startDate = new Date(date.startDate);
+      const endDate = new Date(startDate.setDate(startDate.getDate() + nights - 1));
+      setDate({
+        ...date,
+        endDate: endDate
+      })
+    }
+  }, [nights])
 
   return (
     <div className="border rounded-lg p-5">

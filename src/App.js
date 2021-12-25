@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import LandingPage from "pages/LandingPage";
 import DetailPage from "pages/DetailPage";
 import Checkout from "pages/Checkout";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import 'assets/scss/style.scss';
 
 function App() {
@@ -13,6 +15,7 @@ function App() {
         <Route path="/properties/:id" component={DetailPage}></Route>
         <Route path="/checkout" component={Checkout}></Route>
       </Router>
+      <ToastContainer />
     </div>
   );
 }
