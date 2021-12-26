@@ -16,6 +16,10 @@
   // stylelint-disable-next-line property-disallowed-list
   border-radius: 50%;
   animation: .75s linear infinite spinner-border;
+
+  .visually-hidden {
+    display: none;
+  }
 }
 
 .spinner-border-sm {

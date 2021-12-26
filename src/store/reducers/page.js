@@ -2,6 +2,7 @@ import { FETC_PAGE } from "../types";
 
 const initialState = {
   landingPage: {
+    finishFetch: false,
     hero: {
       travelers: 0,
       treasures: 0,
@@ -20,6 +21,7 @@ const initialState = {
     }
   },
   detail: {
+    finishFetch: false,
     country: "",
     unit: "",
     sumBooking: 0,

@@ -6,7 +6,7 @@ export const fetchPage = (url, page) => (dispatch) => {
     dispatch({
       type: FETC_PAGE,
       payload: {
-        [page]: response.data.data
+        [page]: { ...response.data.data, finishFetch: true }
       }
     })
   })
