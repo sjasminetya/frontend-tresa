@@ -7,4 +7,4 @@
 * **[`Server Tresa`](https://github.com/sjasminetya/server-tresa)**
 
 # Course
-* **[BWA](https://class.buildwithangga.com/kelas)** => Full-Stack JavaScript Developer: Website Travel
+* **[BWA](https://class.buildwithangga.com/kelas)** -> Full-Stack JavaScript Developer: Website Travel
