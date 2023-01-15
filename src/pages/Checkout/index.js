@@ -8,7 +8,7 @@ import Booking from 'components/elements/Checkout/Booking';
 import Payment from 'components/elements/Checkout/Payment';
 import Completed from 'components/elements/Checkout/Completed';
 import { useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { submitBooking } from 'store/action/checkout';
 
 export default function Checkout() {
@@ -25,7 +25,7 @@ export default function Checkout() {
   });
   const checkout = useSelector(state => state.checkout);
   const { detail } = useSelector(state => state.page);
-  const history = useHistory();
+  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
   const onChange = (e) => {
@@ -109,7 +109,7 @@ export default function Checkout() {
               isBlock
               isPrimary
               hasShadow
-              onClick={() => history.push("/")}
+              onClick={() => navigate("/")}
             >
               Back to home
             </Button>
@@ -197,7 +197,7 @@ export default function Checkout() {
                           isBlock
                           isPrimary
                           hasShadow
-                          href=""
+                          href="/"
                         >Back to Home</Button>
                       </Controller>
                     )

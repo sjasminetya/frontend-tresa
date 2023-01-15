@@ -12,8 +12,10 @@ const PageNotFound = () => {
         isBlock
         isPrimary
         hasShadow
-        href=""
-      >Back to Home</Button>
+        href="/"
+      >
+        Back to Home
+      </Button>
     </div>
   )
 }

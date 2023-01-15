@@ -3,14 +3,14 @@ import React, { useEffect, useState } from 'react';
 import InputDate from 'components/fields/InputDate';
 import Number from 'components/fields/InputNumber';
 import Button from 'components/elements/Button';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import moment from 'moment';
 
 export default function InputBooking({ data, startBooking }) {
   const [nights, setNights] = useState(1);
   const [date, setDate] = useState({ startDate: new Date(), endDate: new Date(), key: 'selection' });
-  const history = useHistory();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleChange = e => {
@@ -30,7 +30,7 @@ export default function InputBooking({ data, startBooking }) {
         endDate: moment(date.endDate).format(""),
       }
     }));
-    history.push("/checkout");
+    navigate("/checkout");
   };
 
   useEffect(() => {
